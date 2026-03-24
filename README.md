@@ -101,6 +101,14 @@ Or use a JSON file:
 python3 scripts/fill_and_submit.py --file my_info.json
 ```
 
+### Security
+
+- **Use `--file` instead of `--data`** — command-line arguments are visible in process lists and shell history. Store your passport info in a local JSON file with restricted permissions:
+  ```bash
+  chmod 600 my_info.json
+  ```
+- Your data is only sent to the official MDAC website. No third-party services are involved.
+
 ### Notes
 
 - MDAC must be submitted within **3 days before arrival**
@@ -192,6 +200,14 @@ python3 scripts/fill_and_submit.py --file my_info.json
 - 国籍/出生地代码（CHN、SGP 等）
 - 入境方式（陆路/空路/海路）
 - 柔佛州各城市代码
+
+### 安全提示
+
+- **推荐用 `--file` 而非 `--data`** — 命令行参数会出现在进程列表和 shell 历史里，护照信息不应直接写在命令行中。将信息存入本地 JSON 文件并限制权限：
+  ```bash
+  chmod 600 my_info.json
+  ```
+- 数据只发送到 MDAC 官方网站，不涉及任何第三方服务。
 
 ### 注意事项
 
